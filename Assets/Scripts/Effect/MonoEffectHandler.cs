@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Elementary
+namespace Effect
 {
     public abstract class MonoEffectHandler<T> : MonoBehaviour, IEffectHandler<T>
     {

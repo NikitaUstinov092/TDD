@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Serialization;
 
-
-[Serializable]
+namespace Effect
+{
+    [Serializable]
     public sealed class Effect : IEffect
     {
         [FormerlySerializedAs("parameters")] [SerializeReference]
@@ -49,3 +50,4 @@ using UnityEngine.Serialization;
             return false;
         }
     }
+}

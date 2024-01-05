@@ -1,16 +1,19 @@
 using UnityEngine;
 
-public class EquipmentController : MonoBehaviour
+namespace Equipment
 {
-    [SerializeField] private GameObject[] _equipment;
-    
-    public void ActivateEquipment(int id)
+    public class EquipmentController : MonoBehaviour
     {
-        _equipment[id].SetActive(true);
-    }
+        [SerializeField] private GameObject[] _equipment;
     
-    public void DeActivateEquipment(int id)
-    {
-        _equipment[id].SetActive(false);
+        public void ActivateEquipment(int id)
+        {
+            _equipment[id].SetActive(true);
+        }
+    
+        public void DeActivateEquipment(int id)
+        {
+            _equipment[id].SetActive(false);
+        }
     }
 }

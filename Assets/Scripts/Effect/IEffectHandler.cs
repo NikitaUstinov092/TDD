@@ -1,4 +1,4 @@
-namespace Elementary
+namespace Effect
 {
     public interface IEffectHandler<in T>
     {

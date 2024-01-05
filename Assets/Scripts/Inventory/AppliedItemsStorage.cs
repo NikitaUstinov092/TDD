@@ -1,5 +1,7 @@
 ﻿using System.Collections.Generic;
 
+namespace Inventory
+{
     public class AppliedItemsStorage
     {
         private List<InventoryItem> _appliedItems = new();
@@ -31,3 +33,4 @@
             return false;
         }
     }
+}

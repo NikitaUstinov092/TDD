@@ -1,8 +1,11 @@
 using UnityEngine;
 
-public sealed class Player : MonoBehaviour
+namespace GamePlay
 {
-    public float Speed;
-    public int HitPoints;
-    public int Damage;
+    public sealed class Player : MonoBehaviour
+    {
+        public float Speed;
+        public int HitPoints;
+        public int Damage;
+    }
 }

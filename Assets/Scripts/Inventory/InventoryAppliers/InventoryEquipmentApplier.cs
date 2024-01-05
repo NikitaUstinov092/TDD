@@ -1,4 +1,7 @@
-﻿namespace DefaultNamespace.InventoryAppliers
+﻿using Components;
+using GamePlay;
+
+namespace Inventory.InventoryAppliers
 {
     public class InventoryEquipmentApplier: IInventoryObserver
     {

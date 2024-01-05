@@ -1,6 +1,8 @@
 using Sirenix.OdinInspector;
 using UnityEngine;
 
+namespace Inventory
+{
     public sealed class InventoryContext : MonoBehaviour, IGetInventory<ListInventory>
     {
         [ShowInInspector]
@@ -26,7 +28,8 @@ using UnityEngine;
         }
     }
 
-public interface IGetInventory <T>
-{
-  T GetInventory();
+    public interface IGetInventory <T>
+    {
+        T GetInventory();
+    }
 }

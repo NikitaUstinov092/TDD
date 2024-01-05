@@ -1,8 +1,9 @@
-using Game.GameEngine.Mechanics;
+using GamePlay;
 using UnityEngine;
 
-
-[AddComponentMenu("GameEngine/Mechanics/Effects/Effect Handler «Melee Damage»")]
+namespace Effect
+{
+    [AddComponentMenu("GameEngine/Mechanics/Effects/Effect Handler «Melee Damage»")]
     public sealed class UEffectHandler_MeleeDamage : UEffectHandler
     {
         [SerializeField] 
@@ -24,3 +25,4 @@ using UnityEngine;
             }
         }
     }
+}

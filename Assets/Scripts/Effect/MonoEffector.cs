@@ -4,7 +4,7 @@ using Sirenix.OdinInspector;
 using UnityEngine;
 using UnityEngine.Serialization;
 
-namespace Elementary
+namespace Effect
 {
     public abstract class MonoEffector<T> : MonoBehaviour, IEffector<T>
     {

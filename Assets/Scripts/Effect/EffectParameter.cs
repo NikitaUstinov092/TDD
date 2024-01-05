@@ -2,7 +2,9 @@ using System;
 using UnityEngine;
 using UnityEngine.Serialization;
 
-public interface IEffectParameter
+namespace Effect
+{
+    public interface IEffectParameter
     {
         EffectId Name { get; }
     }
@@ -77,3 +79,4 @@ public interface IEffectParameter
         {
         }
     }
+}

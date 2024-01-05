@@ -1,5 +1,8 @@
-public interface IInventoryObserver
+namespace Inventory
 {
-    void OnItemAdded(InventoryItem item);
-    void OnItemRemoved(InventoryItem item);
+    public interface IInventoryObserver
+    {
+        void OnItemAdded(InventoryItem item);
+        void OnItemRemoved(InventoryItem item);
+    }
 }

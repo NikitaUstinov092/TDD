@@ -1,13 +1,16 @@
 using System.Collections.Generic;
 using System.Linq;
 using Sirenix.OdinInspector;
+
+namespace Inventory
+{
     public sealed class ListInventory
     {
         [ShowInInspector, ReadOnly]
         private readonly List<InventoryItem> _items;
         public ListInventory(params InventoryItem[] items)
         {
-             _items = new List<InventoryItem>(items);
+            _items = new List<InventoryItem>(items);
         }
         public void AddItem(InventoryItem item)
         {
@@ -48,6 +51,5 @@ using Sirenix.OdinInspector;
             result = null;
             return false;
         }
-
-      
     }
+}

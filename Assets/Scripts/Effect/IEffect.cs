@@ -1,9 +1,12 @@
 
-    public interface IEffect
+    namespace Effect
     {
-        T GetParameter<T>(EffectId name);
+        public interface IEffect
+        {
+            T GetParameter<T>(EffectId name);
 
-        bool TryGetParameter<T>(EffectId name, out T value);
+            bool TryGetParameter<T>(EffectId name, out T value);
+        }
     }
 
    

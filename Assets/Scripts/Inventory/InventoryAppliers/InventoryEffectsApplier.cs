@@ -1,38 +1,45 @@
 
-    public sealed class InventoryEffectsApplier : IInventoryObserver
+    using Components;
+    using Effect;
+    using GamePlay;
+
+    namespace Inventory.InventoryAppliers
     {
-        private readonly IEntity _hero;
-
-        public InventoryEffectsApplier(IEntity hero)
+        public sealed class InventoryEffectsApplier : IInventoryObserver
         {
-            _hero = hero;
-        }
+            private readonly IEntity _hero;
 
-        void IInventoryObserver.OnItemAdded(InventoryItem item)
-        {
-            if (IsEffectible(item))
+            public InventoryEffectsApplier(IEntity hero)
             {
-                var effect = GetEffect(item);
-                _hero.Get<IComponent_Effector>().Apply(effect);
+                _hero = hero;
             }
-        }
 
-        void IInventoryObserver.OnItemRemoved(InventoryItem item)
-        {
-            if (IsEffectible(item))
+            void IInventoryObserver.OnItemAdded(InventoryItem item)
             {
-                var effect = GetEffect(item);
-                _hero.Get<IComponent_Effector>().Discard(effect);
+                if (IsEffectible(item))
+                {
+                    var effect = GetEffect(item);
+                    _hero.Get<IComponent_Effector>().Apply(effect);
+                }
             }
-        }
 
-        private static IEffect GetEffect(InventoryItem item)
-        {
-            return item.GetComponent<IComponent_GetEffect>().Effect;
-        }
+            void IInventoryObserver.OnItemRemoved(InventoryItem item)
+            {
+                if (IsEffectible(item))
+                {
+                    var effect = GetEffect(item);
+                    _hero.Get<IComponent_Effector>().Discard(effect);
+                }
+            }
 
-        private static bool IsEffectible(InventoryItem item)
-        {
-            return item.Flags.HasFlag(InventoryItemFlags.EFFECTIBLE);
+            private static IEffect GetEffect(InventoryItem item)
+            {
+                return item.GetComponent<IComponent_GetEffect>().Effect;
+            }
+
+            private static bool IsEffectible(InventoryItem item)
+            {
+                return item.Flags.HasFlag(InventoryItemFlags.EFFECTIBLE);
+            }
         }
     }

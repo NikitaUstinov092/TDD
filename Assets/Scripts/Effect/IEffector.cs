@@ -1,6 +1,6 @@
 using System;
 
-namespace Elementary
+namespace Effect
 {
     public interface IEffector<T>
     {

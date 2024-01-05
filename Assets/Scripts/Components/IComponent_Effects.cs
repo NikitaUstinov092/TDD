@@ -1,5 +1,8 @@
 using System;
+using Effect;
 
+namespace Components
+{
     public interface IComponent_GetEffect
     {
         IEffect Effect { get; }
@@ -13,3 +16,4 @@ using System;
         void Apply(IEffect effect);
         void Discard(IEffect effect);
     }
+}

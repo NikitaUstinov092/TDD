@@ -1,17 +1,20 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EntityInstaller : MonoBehaviour
+namespace GamePlay
 {
-   [SerializeField] private List<MonoBehaviour> _monoBehavioursComp;
-
-   private void Awake()
+   public class EntityInstaller : MonoBehaviour
    {
-      var entity = GetComponent<Entity>();
-      
-      foreach (var comp in _monoBehavioursComp)
+      [SerializeField] private List<MonoBehaviour> _monoBehavioursComp;
+
+      private void Awake()
       {
-         entity.AddComponent(comp);
+         var entity = GetComponent<Entity>();
+      
+         foreach (var comp in _monoBehavioursComp)
+         {
+            entity.AddComponent(comp);
+         }
       }
    }
 }

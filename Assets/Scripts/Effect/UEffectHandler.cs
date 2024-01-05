@@ -1,6 +1,4 @@
-using Elementary;
-
-namespace Game.GameEngine.Mechanics
+namespace Effect
 {
     public abstract class UEffectHandler : MonoEffectHandler<IEffect>
     {

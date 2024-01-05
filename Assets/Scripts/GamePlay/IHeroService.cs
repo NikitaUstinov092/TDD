@@ -1,5 +1,8 @@
 
-    public interface IHeroService
+    namespace GamePlay
     {
-        IEntity GetHero();
+        public interface IHeroService
+        {
+            IEntity GetHero();
+        }
     }

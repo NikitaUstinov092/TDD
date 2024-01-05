@@ -1,9 +1,12 @@
 using System;
 
-[Flags]
-public enum InventoryItemFlags
+namespace Inventory
 {
-    NONE = 0,
-    EQUPPABLE = 1,
-    EFFECTIBLE = 2
+    [Flags]
+    public enum InventoryItemFlags
+    {
+        NONE = 0,
+        EQUPPABLE = 1,
+        EFFECTIBLE = 2
+    }
 }
