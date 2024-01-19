@@ -20,27 +20,27 @@ MonoBehaviour:
       Description: 
       Icon: {fileID: 0}
     _components:
-    - rid: 838520933871517700
-    - rid: 838520933871517701
+    - rid: 6904716548056023040
+    - rid: 6904716548056023047
   references:
     version: 2
     RefIds:
-    - rid: 838520933871517700
-      type: {class: Component_Effect, ns: , asm: Assembly-CSharp}
+    - rid: 6904716548056023040
+      type: {class: Component_Effect, ns: Components, asm: Assembly-CSharp}
       data:
         _effect:
-          rid: 838520933871517702
-    - rid: 838520933871517701
-      type: {class: Component_Equipment, ns: , asm: Assembly-CSharp}
-      data:
-        _equipmentId: 0
-    - rid: 838520933871517702
-      type: {class: Effect, ns: , asm: Assembly-CSharp}
+          rid: 6904716548056023041
+    - rid: 6904716548056023041
+      type: {class: Effect, ns: Effect, asm: Assembly-CSharp}
       data:
         _parameters:
-        - rid: 838520933871517703
-    - rid: 838520933871517703
-      type: {class: FloatEffectParameter, ns: , asm: Assembly-CSharp}
+        - rid: 6904716548056023042
+    - rid: 6904716548056023042
+      type: {class: FloatEffectParameter, ns: Effect, asm: Assembly-CSharp}
       data:
         _name: 0
-        _value: 11
+        _value: 1
+    - rid: 6904716548056023047
+      type: {class: Component_Equipment, ns: Components, asm: Assembly-CSharp}
+      data:
+        _equipmentId: 0

@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Inventory
 {
-    public sealed class InventoryContext : MonoBehaviour, IGetInventory<ListInventory>
+    public sealed class InventoryContext : MonoBehaviour
     {
         [ShowInInspector]
         public readonly ListInventory Inventory = new();
@@ -27,9 +27,5 @@ namespace Inventory
             return Inventory;
         }
     }
-
-    public interface IGetInventory <T>
-    {
-        T GetInventory();
-    }
+    
 }
